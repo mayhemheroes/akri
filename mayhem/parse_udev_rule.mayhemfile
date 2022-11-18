@@ -1,0 +1,7 @@
+project: akri
+target: parse-udev-rule
+
+cmds:
+  - cmd: /parse_udev_rule
+  - cmd: /parse_udev_rule_no_inst @@
+    libfuzzer: false
