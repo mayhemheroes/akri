@@ -45,7 +45,7 @@ pub fn do_parse_and_find(
 /// Udev discovery is only interested in match operations ("==",  "!="), so all action ("=" , "+=" , "-=" , ":=") operations
 /// will be ignored.
 /// Udev discovery is only interested in match fields, so all action fields, such as TEST, are ignored
-fn parse_udev_rule(udev_rule_string: &str) -> Result<Vec<UdevFilter>, anyhow::Error> {
+pub(crate) fn parse_udev_rule(udev_rule_string: &str) -> Result<Vec<UdevFilter>, anyhow::Error> {
     info!(
         "parse_udev_rule - enter for udev rule string {}",
         udev_rule_string
