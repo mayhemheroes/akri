@@ -26,4 +26,4 @@ RUN echo building non-instrumented harnesses && \
 FROM rustlang/rust:nightly
 
 COPY --from=builder /parse_udev_rule /parse_udev_rule_no_inst /
-COPY --from=builder /lib/x86_64-linux-gnu/libudev.so.1 /lib/x86_64-linux-gnu/
+COPY --from=builder /usr/lib/x86_64-linux-gnu/libudev.so.1 /usr/lib/x86_64-linux-gnu/
